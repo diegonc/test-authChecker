@@ -9,7 +9,15 @@ class TestResolver {
   }
 }
 
-buildSchema({
-  authChecker: () => true,
-  resolvers: [TestResolver]
-})
+async function main() {
+  try {
+    await buildSchema({
+      authChecker: () => true,
+      resolvers: [TestResolver]
+    })
+  } catch (e) {
+    console.log(e)
+  }
+}
+
+main()
