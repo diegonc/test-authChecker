@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import { buildSchema, Resolver } from 'type-graphql'
 
 @Resolver()
